@@ -1,5 +1,7 @@
 const webpack = require("webpack");
-// const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+// const BundleAnalyzerPlugin =
+//   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "development",
@@ -9,9 +11,12 @@ module.exports = {
     open: true,
   },
   plugins: [
-    // new ReactRefreshWebpackPlugin(),
+    new ReactRefreshWebpackPlugin({
+      overlay: false,
+    }),
     new webpack.DefinePlugin({
       "process.env.name": JSON.stringify("Vishwas"),
     }),
+    // new BundleAnalyzerPlugin(),
   ],
 };

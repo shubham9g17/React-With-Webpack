@@ -4,9 +4,9 @@ import Logo from "./redux.svg";
 export const App = () => {
   return (
     <>
-      <h1>Hello React</h1>
+      <h1>Hello React {process.env.name}</h1>
       <img src={Image} alt="React Logo" />
-      <img src={Logo} alt="Redux Logo" />
+      <Logo />
     </>
   );
 };
